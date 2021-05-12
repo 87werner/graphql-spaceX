@@ -17,7 +17,7 @@ app.use('/graphql',
 );
 
 // has to be below GraphQL route
-app,use(express.static('public'));
+app.use(express.static('public'));
 
 app.get('*', (req,res) => {
   res.sendFile(path.resolve(__dirname, 'public', 'index.html'));
